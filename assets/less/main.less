@@ -12,27 +12,83 @@
 * {
   font-family: 'Inter', sans-serif;
 }
-
 html {
   width: 100%;
   height: 100%;
   background-color: #FFF;
 }
-
 body {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-
 a {
   cursor: pointer;
   color: #000000;
+  text-decoration: none;
   &:hover, &:focus, &:active{
     color: #F58229;
   }
 }
-
+header{
+  height: 80px;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  .inner{
+    width: 1366px;
+    margin: 0 auto;
+    #mainmenu{
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .desktop-logo{
+        height: 40px;
+        .header-logo{
+          height: 40px;
+        }
+      }
+      #navbar{
+        ul.nav{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li{
+            display: inline-block;
+            margin-left: 20px;
+            text-align: center;
+            &.active{
+              color: #F58229;
+              a{
+                color: #F58229;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.main-body{
+  min-height: 660px;
+}
+footer{
+  width: 100%;
+  padding: 54px 0;
+  box-sizing: border-box;
+  background-color: #2B2A29;
+  .inner {
+    width: 1366px;
+    margin: 0 auto;
+    .desktop-logo{
+      height: 40px;
+      .footer-logo{
+        height: 40px;
+      }
+    }
+  }
+}
 p {
   font-size: 14px;
 }

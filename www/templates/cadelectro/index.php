@@ -37,9 +37,27 @@ $user = JFactory::getUser();
 	?>">
         <jdoc:include type="message" />
         <header>
+            <div class="inner">
+                <div id="mainmenu">
+                    <a class="desktop-logo" href="/">
+                        <img class="header-logo"
+                             src="/templates/cadelectro/assets/img/cadelectro-logo.png">
+                    </a>
+                    <jdoc:include type="modules" name="navbar" />
+                </div>
+            </div>
         </header>
+        <div class="main-body">
+
+        </div>
 	</div>
 	<footer>
+        <div class="inner">
+            <a class="desktop-logo" href="/">
+                <img class="footer-logo"
+                     src="/templates/cadelectro/assets/img/cadelectro-logo.png">
+            </a>
+        </div>
 	</footer>
 <?php $this->addStyleSheet($template.'/assets/css/main.css?v=1');?>
 </body>
