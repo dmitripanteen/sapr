@@ -1,0 +1,16 @@
+.idea/
+/node_modules/
+/vendor/
+
+/www/cache/
+/www/logs/
+/www/tmp/
+/www/administrator/cache/
+/www/administrator/logs/
+
+/configuration.php
+/www/robots.txt
+
+.htpasswd
+
+/www/administrator/templates/system/custom/
