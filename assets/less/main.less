@@ -1,0 +1,38 @@
+@fa_path: "../../node_modules/font-awesome/less";
+
+@import (less) '../../node_modules/lightslider/dist/css/lightslider.css';
+@import 'fonts.less';
+@import 'themify-icons.less';
+@import "@{fa_path}/variables.less";
+@import "@{fa_path}/mixins.less";
+@import "@{fa_path}/path.less";
+@import "@{fa_path}/core.less";
+@import "@{fa_path}/icons.less";
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  color: #000000;
+  &:hover, &:focus, &:active{
+    color: #F58229;
+  }
+}
+
+p {
+  font-size: 14px;
+}

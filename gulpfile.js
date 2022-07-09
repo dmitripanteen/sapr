@@ -22,7 +22,7 @@ var
 	optMinifySkipImg = env['minify-skip-img'] || false;
 
 var
-	srcDir = 'assets_src/',
+	srcDir = 'assets/',
 	buildDir = optStatic ? 'www/tmp/templates/' : 'www/templates/cadelectro/assets/',
 	assetsDir = optStatic ? buildDir + 'assets/' : buildDir,
 	cleancss = new LessPluginCleanCSS({
