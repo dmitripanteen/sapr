@@ -70,6 +70,67 @@ header{
     }
   }
 }
+#slider{
+  height: 365px;
+  position: relative;
+  .slide{
+    height: 100%;
+    width: 70%;
+    background-size: cover;
+    background-position: center;
+  }
+  .bgr{
+    position:absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    height: 100%;
+    .triangle {
+      position: absolute;
+      top: 0;
+      border-bottom: 365px solid #ffffff80;
+      border-left: 415px solid transparent;
+      height: 0;
+      width: 0;
+      &.triangle1{
+        left: 0;
+        border-right: 144px solid #ffffff80;
+      }
+      &.triangle2{
+        left: 48px;
+        border-right: 96px solid #ffffff80;
+      }
+      &.triangle3{
+        left: 96px;
+        border-right: 48px solid #ffffff80;
+      }
+      &.triangle-white{
+        left: 144px;
+        border-bottom: 365px solid #ffffff;
+      }
+    }
+    .white-area{
+      position: absolute;
+      height: 100%;
+      width: calc(~'100% - 559px');
+      left: 559px;
+      background-color: #ffffff;
+    }
+  }
+  .logo{
+    width: 1366px;
+    margin: 0 auto;
+    position: relative;
+    top: -365px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .banner-logo{
+      height: 100px;
+    }
+  }
+}
 .main-body{
   min-height: 660px;
 }
@@ -81,7 +142,7 @@ footer{
   .inner {
     width: 1366px;
     margin: 0 auto;
-    .desktop-logo{
+    .desktop-logo-footer{
       height: 40px;
       .footer-logo{
         height: 40px;

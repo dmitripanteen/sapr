@@ -47,16 +47,28 @@ $user = JFactory::getUser();
                 </div>
             </div>
         </header>
+        <jdoc:include type="modules" name="slider" />
         <div class="main-body">
 
         </div>
 	</div>
 	<footer>
         <div class="inner">
-            <a class="desktop-logo" href="/">
-                <img class="footer-logo"
-                     src="/templates/cadelectro/assets/img/cadelectro-logo.png">
-            </a>
+            <div class="desktop-logo-footer">
+                <a href="/">
+                    <img class="footer-logo"
+                         src="/templates/cadelectro/assets/img/cadelectro-logo.png">
+                </a>
+            </div>
+            <div class="footer-body">
+
+                <div class="footer-menu">
+                    <jdoc:include type="modules" name="footermenu" />
+                </div>
+                <div class="contacts">
+                    <jdoc:include type="modules" name="footercontacts" />
+                </div>
+            </div>
         </div>
 	</footer>
 <?php $this->addStyleSheet($template.'/assets/css/main.css?v=1');?>
