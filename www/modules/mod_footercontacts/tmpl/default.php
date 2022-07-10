@@ -29,5 +29,7 @@
             break;
     }
     echo '<p>'.$res.'</p>';
-};
+}?>
+<img class="technicon-logo"
+     src="/templates/cadelectro/assets/img/technicon-logo.png">
 

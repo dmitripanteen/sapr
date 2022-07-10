@@ -4,7 +4,7 @@ $itemsPerColumn = ceil($itemsCount) / 2;
 ?>
 <div class="col">
     <?php foreach ($list as $i => &$item) {
-        if ($i == $itemsPerColumn + 1) {
+        if ($i == $itemsPerColumn) {
             echo '</div><div class="col">';
         }
         echo '<p>';

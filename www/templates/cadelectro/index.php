@@ -29,6 +29,7 @@ $user = JFactory::getUser();
 <!DOCTYPE html>
 <html lang="<?= $this->language; ?>" dir="<?= $this->direction; ?>" xmlns:jdoc="http://www.w3.org/2001/XInclude">
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<jdoc:include type="head" />
     <jdoc:include type="modules" name="analytics"/>
 </head>
@@ -61,12 +62,16 @@ $user = JFactory::getUser();
                 </a>
             </div>
             <div class="footer-body">
-
-                <div class="footer-menu">
-                    <jdoc:include type="modules" name="footer-menu" />
+                <div class="footer-body-1">
+                    <div class="footer-menu">
+                        <jdoc:include type="modules" name="footer-menu" />
+                    </div>
+                    <div class="contacts">
+                        <jdoc:include type="modules" name="footer-contacts" />
+                    </div>
                 </div>
-                <div class="contacts">
-                    <jdoc:include type="modules" name="footer-contacts" />
+                <div class="footer-social">
+                    <jdoc:include type="modules" name="footer-social" />
                 </div>
             </div>
         </div>

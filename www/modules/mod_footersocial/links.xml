@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field
+			name="social_media"
+			type="list"
+			label="MOD_FOOTERSOCIAL_FIELD_SOCIAL_MEDIA_LABEL"
+			default="0"
+	>
+		<option value="0"
+				disabled="disabled"
+		>
+			MOD_FOOTERSOCIAL_CHOOSE_LABEL
+		</option>
+		<option value="facebook">MOD_FOOTERSOCIAL_FACEBOOK_LABEL</option>
+		<option value="linkedin">MOD_FOOTERSOCIAL_LINKEDIN_LABEL</option>
+		<option value="instagram">MOD_FOOTERSOCIAL_INSTAGRAM_LABEL</option>
+		<option value="viber">MOD_FOOTERSOCIAL_VIBER_LABEL</option>
+		<option value="whatsapp">MOD_FOOTERSOCIAL_WHATSAPP_LABEL</option>
+		<option value="telegram">MOD_FOOTERSOCIAL_TELEGRAM_LABEL</option>
+		<option value="youtube">MOD_FOOTERSOCIAL_YOUTUBE_LABEL</option>
+	</field>
+	<field
+			name="url"
+			type="text"
+			label="MOD_FOOTERSOCIAL_FIELD_URL_LABEL"
+	/>
+	<field
+			name="is_open_new_tab"
+			type="radio"
+			label="MOD_FOOTERSOCIAL_FIELD_OPEN_NEW_TAB_LABEL"
+			class="btn-group btn-group-yesno"
+			default="1"
+	>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+</form>

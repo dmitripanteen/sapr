@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_footersocial</name>
+	<author>Dmitri Pantelei</author>
+	<creationDate>July 2022</creationDate>
+	<description>MOD_FOOTERSOCIAL_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_footersocial">mod_footersocial.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_footersocial.ini</language>
+		<language tag="en-GB">en-GB.mod_footersocial.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_footersocial.ini</language>
+		<language tag="ru-RU">ru-RU.mod_footersocial.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="links"
+						type="subform"
+						label="MOD_FOOTERCONTACTS_FIELD_LINKS_LABEL"
+						description="MOD_FOOTERCONTACTS_FIELD_LINKS_LABEL"
+						formsource="/modules/mod_footersocial/links.xml"
+						layout="joomla.form.field.subform.repeatable-table"
+						multiple="true"
+				/>
+				<field
+						name="copyrights"
+						type="text"
+						label="MOD_FOOTERCONTACTS_FIELD_COPYRIGHTS_LABEL"
+						class="input-xxlarge"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,4 +1,4 @@
-# SAPR website
+# CADElectro website
 Based on Joomla! 3.10.x CMS
 
 ### Requirements
