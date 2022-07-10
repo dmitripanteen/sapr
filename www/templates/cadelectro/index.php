@@ -63,10 +63,10 @@ $user = JFactory::getUser();
             <div class="footer-body">
 
                 <div class="footer-menu">
-                    <jdoc:include type="modules" name="footermenu" />
+                    <jdoc:include type="modules" name="footer-menu" />
                 </div>
                 <div class="contacts">
-                    <jdoc:include type="modules" name="footercontacts" />
+                    <jdoc:include type="modules" name="footer-contacts" />
                 </div>
             </div>
         </div>

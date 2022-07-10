@@ -7,6 +7,7 @@ $itemsPerColumn = ceil($itemsCount) / 2;
         if ($i == $itemsPerColumn + 1) {
             echo '</div><div class="col">';
         }
+        echo '<p>';
         switch ($item->type) :
             case 'separator':
                 $item->type = 'separator';
@@ -29,5 +30,6 @@ $itemsPerColumn = ceil($itemsCount) / 2;
                 require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
                 break;
         endswitch;
+        echo '</p>';
     } ?>
 </div>

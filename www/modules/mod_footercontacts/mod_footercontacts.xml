@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_footercontacts</name>
+	<author>Dmitri Pantelei</author>
+	<creationDate>July 2022</creationDate>
+	<description>MOD_FOOTERCONTACTS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_footercontacts">mod_footercontacts.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_footercontacts.ini</language>
+		<language tag="en-GB">en-GB.mod_footercontacts.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_footercontacts.ini</language>
+		<language tag="ru-RU">ru-RU.mod_footercontacts.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="info"
+						type="subform"
+						label="MOD_FOOTERCONTACTS_FIELD_INFO_LABEL"
+						description="MOD_FOOTERCONTACTS_FIELD_INFO_LABEL"
+						formsource="/modules/mod_footercontacts/info-rows.xml"
+						layout="joomla.form.field.subform.repeatable-table"
+						multiple="true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

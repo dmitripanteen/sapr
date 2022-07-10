@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field
+		name="line1"
+		type="text"
+		label="MOD_FOOTERCONTACTS_FIELD_LINE1_LABEL"
+		/>
+	
+	<field
+		name="line2"
+		type="text"
+		label="MOD_FOOTERCONTACTS_FIELD_LINE2_LABEL"
+		/>
+	<field
+			name="type"
+			type="list"
+			label="MOD_FOOTERCONTACTS_FIELD_TYPE_LABEL"
+			default="text"
+	>
+		<option value="text">MOD_FOOTERCONTACTS_FIELD_TYPE_TEXT_LABEL</option>
+		<option value="email">MOD_FOOTERCONTACTS_FIELD_TYPE_EMAIL_LABEL</option>
+		<option value="phone">MOD_FOOTERCONTACTS_FIELD_TYPE_PHONE_LABEL</option>
+	</field>
+
+</form>
