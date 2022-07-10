@@ -19,6 +19,9 @@
         <position>featured</position>
         <position>pre-footer</position>
         <position>footer</position>
+        <position>footer-menu</position>
+        <position>footer-contacts</position>
+        <position>footer-social</position>
         <position>analytics</position>
     </positions>
     <language>
