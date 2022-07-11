@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+    <name>COM_CONTACT_US</name>
+    <version>1.0</version>
+    <description>COM_CONTACT_US_XML_DESCRIPTION</description>
+    <creationDate>July 2022</creationDate>
+    <author>Dmitri Pantelei</author>
+
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>contactus.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>controllers</folder>
+    </files>
+    <administration>
+        <files folder="admin">
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>contactus.php</filename>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>controllers</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_contactus.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_contactus.sys.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_contactus.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_contactus.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_CONTACT_US_CONTACT_US_TITLE">
+        <message>COM_CONTACT_US_CONTACT_US_TITLE_DESC</message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                    name="custom_header"
+                    type="text"
+                    label="COM_CONTACT_US_CUSTOM_HEADER_LABEL"
+            />
+
+            <field
+                    name="contact_data"
+                    type="editor"
+                    label="COM_CONTACT_US_CONTACT_DATA_LABEL"
+                    filter="safehtml"
+            />
+
+            <field
+                    name="map_code"
+                    type="textarea"
+                    filter="raw"
+                    default=""
+                    label="COM_CONTACT_US_MAP_CODE_LABEL"
+                    cols="10"
+                    rows="10"
+            />
+        </fieldset>
+    </fields>
+</metadata>

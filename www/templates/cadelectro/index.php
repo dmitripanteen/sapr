@@ -25,6 +25,7 @@ $this->addScript($template.'/assets/js/main.js?v=1');
 
 $homepage = ($currPage == $menu->getDefault($lang->getTag()));
 $user = JFactory::getUser();
+$currPageClass = $currPage->getParams()->get('pageclass_sfx');
 ?>
 <!DOCTYPE html>
 <html lang="<?= $this->language; ?>" dir="<?= $this->direction; ?>" xmlns:jdoc="http://www.w3.org/2001/XInclude">
@@ -33,7 +34,7 @@ $user = JFactory::getUser();
 	<jdoc:include type="head" />
     <jdoc:include type="modules" name="analytics"/>
 </head>
-<body class="<?php if(! $homepage):?>content-page<?php endif;?> page-option-<?=$app->input->get('option');?> page-view-<?=$app->input->get('view');?>">
+<body class="<?php if(! $homepage):?>content-page<?php endif;?>">
 	<div class="page-main-content<?php if ($homepage):?> homepage<?php endif;
 	?>">
         <jdoc:include type="message" />
@@ -49,8 +50,8 @@ $user = JFactory::getUser();
             </div>
         </header>
         <jdoc:include type="modules" name="slider" />
-        <div class="main-body">
-
+        <div class="main-body <?=$currPageClass;?>">
+            <jdoc:include type="component" />
         </div>
 	</div>
 	<footer>
