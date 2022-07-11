@@ -31,6 +31,11 @@ $currPageClass = $currPage->getParams()->get('pageclass_sfx');
 <html lang="<?= $this->language; ?>" dir="<?= $this->direction; ?>" xmlns:jdoc="http://www.w3.org/2001/XInclude">
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" type="image/svg+xml" sizes="any"
+          href="/templates/cadelectro/assets/img/favicons/196x196.svg">
+    <link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
+    <link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
+    <link rel="apple-touch-icon" href="/img/icon-196x196.png">
 	<jdoc:include type="head" />
     <jdoc:include type="modules" name="analytics"/>
 </head>
