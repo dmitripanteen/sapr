@@ -18,7 +18,8 @@ class FormViewTrialVersion extends JViewLegacy {
         $app = JFactory::getApplication();
 
         $this->params = $app->getParams();
-        $this->pageHeading = $this->params->get('page_heading');
+        $this->pageHeading = $this->params->get('page_heading')
+            ?? JFactory::getApplication()->getMenu()->getActive()->title;
         $this->textBeforeForm = $this->params->get('text_before_form');
         $this->submitText = $this->params->get('submit_text');
 

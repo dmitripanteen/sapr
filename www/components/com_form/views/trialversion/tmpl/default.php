@@ -14,7 +14,7 @@ if ($this->params['menu-meta_keywords']) {
 ?>
 <h1 class="page-header"><?= $this->pageHeading; ?></h1>
 <?php if ($this->textBeforeForm): ?>
-    <div class="text-before-form">
+    <div class="text-before-content">
         <?= $this->textBeforeForm; ?>
     </div>
 <?php endif; ?>

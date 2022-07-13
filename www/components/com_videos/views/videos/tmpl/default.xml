@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_VIDEOS_VIDEOS_TITLE">
+        <message>COM_VIDEOS_VIDEOS_DESC</message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                    name="text_before_videos"
+                    type="editor"
+                    label="COM_VIDEOS_TEXT_BEFORE_VIDEOS_LABEL"
+                    filter="safehtml"
+            />
+        </fieldset>
+    </fields>
+</metadata>

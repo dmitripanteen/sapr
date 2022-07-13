@@ -26,13 +26,6 @@
             />
 
             <field
-                    name="text_before_form"
-                    type="editor"
-                    label="COM_FORM_TEXT_BEFORE_FORM_LABEL"
-                    filter="safehtml"
-            />
-
-            <field
                     name="submit_text"
                     type="text"
                     label="COM_FORM_SUBMIT_TEXT_LABEL"

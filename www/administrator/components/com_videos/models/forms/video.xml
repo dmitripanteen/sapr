@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field
+                name="id"
+                type="hidden"
+        />
+        <field
+                id="title"
+                name="title"
+                type="text"
+                label="JGLOBAL_TITLE"
+                description="COM_VIDEOS_FIELD_VIDEO_TITLE_DESC"
+                required="true"
+                maxlength="100"
+                class="input-xxlarge input-large-text"
+                default=""
+        />
+        <field
+                id="published"
+                name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="chzn-color-state"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field
+                id="description"
+                name="description"
+                type="editor"
+                label="JGLOBAL_DESCRIPTION"
+                description="COM_VIDEOS_FIELD_VIDEO_DESCRIPTION_DESC"
+                filter="safehtml"
+                class="inputbox"
+                default=""
+        />
+        <field
+                id="link"
+                name="link"
+                type="textarea"
+                label="COM_VIDEOS_FIELD_VIDEO_LINK_LABEL"
+                description="COM_VIDEOS_FIELD_VIDEO_LINK_DESC"
+                size="200"
+                rows="6"
+                class="input-xxlarge"
+                default=""
+                filter="raw"
+        />
+    </fieldset>
+</form>
