@@ -20,7 +20,7 @@ $this->setMetaData('X-UA-Compatible', 'IE=edge');
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 $this->setMetadata('copyright', htmlspecialchars($app->get('sitename')));
 
-$this->addFavicon($template.'/images/cadelectro-logo.png');
+$this->addFavicon($template.'/assets/img/cadelectro-logo.png');
 $this->addScript($template.'/assets/js/main.js?v=1');
 
 $homepage = ($currPage == $menu->getDefault($lang->getTag()));

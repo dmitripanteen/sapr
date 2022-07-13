@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+    <name>COM_FORM</name>
+    <version>1.0</version>
+    <description>COM_FORM_XML_DESCRIPTION</description>
+    <creationDate>July 2022</creationDate>
+    <author>Dmitri Pantelei</author>
+
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>form.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>controllers</folder>
+    </files>
+    <administration>
+        <menu>COM_FORM_MENU</menu>
+        <files folder="admin">
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>form.php</filename>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>controllers</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_form.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_form.sys.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_form.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_form.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

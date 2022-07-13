@@ -21,3 +21,5 @@ jQuery(document).ready(function ($) {
         }
     }
 });
+
+//=require ./forms.js

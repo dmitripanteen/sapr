@@ -136,6 +136,23 @@ header{
 }
 .main-body{
   min-height: 660px;
+  .btn-default{
+    height: 70px;
+    line-height: 70px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 24px;
+    &:hover, &:focus{
+      cursor: pointer;
+    }
+  }
+  .btn-orange{
+    background-color: #F58229;
+    &:hover, &:focus{
+      background-color: #EF7221;
+    }
+  }
 }
 footer{
   width: 100%;
@@ -217,5 +234,25 @@ footer{
 .main-body{
   width: 1366px;
   margin: 50px auto;
+  h1.page-header{
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 2em;
+    height: 2em;
+    padding-left: 32px;
+    position: relative;
+    &:before{
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      border-radius: 4px;
+      background-color: #F58229;
+      content: '';
+      display: table;
+    }
+  }
   @import 'contacts.less';
+  @import 'form.less';
 }

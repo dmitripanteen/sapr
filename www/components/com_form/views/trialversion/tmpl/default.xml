@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_FORM_TRIAL_VERSION_TITLE">
+        <message>COM_FORM_TRIAL_VERSION_DESC</message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic">
+
+            <field
+                    name="email_to_address"
+                    type="text"
+                    label="COM_FORM_EMAIL_TO_ADDRESS_LABEL"
+            />
+
+            <field
+                    name="email_subject"
+                    type="text"
+                    label="COM_FORM_EMAIL_SUBJECT_LABEL"
+            />
+
+            <field
+                    name="text_before_form"
+                    type="editor"
+                    label="COM_FORM_TEXT_BEFORE_FORM_LABEL"
+                    filter="safehtml"
+            />
+
+            <field
+                    name="text_before_form"
+                    type="editor"
+                    label="COM_FORM_TEXT_BEFORE_FORM_LABEL"
+                    filter="safehtml"
+            />
+
+            <field
+                    name="submit_text"
+                    type="text"
+                    label="COM_FORM_SUBMIT_TEXT_LABEL"
+                    default="Отправить"
+            />
+        </fieldset>
+    </fields>
+</metadata>
