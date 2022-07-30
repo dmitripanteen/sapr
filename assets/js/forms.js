@@ -1,6 +1,8 @@
-jQuery(document).ready(function($){
-    (function(){
-        $('#trial-version-form button[type="submit"]').bind('click', function(e) {
+jQuery(document).ready(function ($) {
+    filterInputs();
+
+    (function () {
+        $('#trial-version-form button[type="submit"]').bind('click', function (e) {
             e.preventDefault();
             var formData = getSerializedFormData("#trial-version-form");
             var task = $('#trial-version-form input[name="task"]').val();
@@ -9,9 +11,9 @@ jQuery(document).ready(function($){
                 url: '/index.php?option=com_form&task=' + task,
                 data: formData,
                 dataType: 'html',
-                success: function(html) {
+                success: function (html) {
                     request = null;
-                    if(html.indexOf('true') + 1) {
+                    if (html.indexOf('true') + 1) {
                         $('.info-message')
                             .removeClass('error')
                             .removeClass('success')
@@ -27,7 +29,7 @@ jQuery(document).ready(function($){
                             .html(html);
                     }
                 },
-                error: function() {
+                error: function () {
                     var message = "";
                     if (grecaptcha.getResponse().length == 0) {
                         message = "\nПожалуйста заполните CAPTCHA";
@@ -43,7 +45,7 @@ jQuery(document).ready(function($){
     }());
 
     function reloadCaptcha() {
-        if(grecaptcha) {
+        if (grecaptcha) {
             $('#trial-version-form').find('#g-recaptcha-response').remove();
             grecaptcha.reset()
         }
@@ -53,9 +55,14 @@ jQuery(document).ready(function($){
         var form = jQuery(formSelector),
             disabled = form.find(':input:disabled').removeAttr('disabled'),
             data = form.serializeArray();
-
-        disabled.attr('disabled','disabled');
-
+        disabled.attr('disabled', 'disabled');
         return data;
+    }
+
+    function filterInputs() {
+        $('#trial-version-form #inn').mask('N').attr('maxlength', 10);
+        $('#trial-version-form #contact_person').mask('&');
+        $('#trial-version-form #phone').mask('P');
+        $('#trial-version-form #email').mask('E', {reverse: true});
     }
 });

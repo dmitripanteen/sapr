@@ -68,9 +68,6 @@ jQuery(document).ready(function ($) {
         $(modal).show();
         $(modalImg).attr('src', $(el).attr('src'));
         var span = $('#modal .close');
-        // $(span).click(function (){
-        //     $(modal).hide();
-        // });
         $(modal).click(function(e) {
             if( e.target.id != 'modal-image') {
                 $(modal).hide();
@@ -80,3 +77,5 @@ jQuery(document).ready(function ($) {
 });
 
 //=require ./forms.js
+//=require ./jquery.mask.min.js
+//=require ./jquery.mask.custom.js

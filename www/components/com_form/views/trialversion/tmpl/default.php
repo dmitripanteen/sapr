@@ -99,7 +99,7 @@ if ($this->params['menu-meta_keywords']) {
                         <?= JText::_('COM_FORM_FIELD_EMAIL_LABEL'); ?>
                     </label>
                     <input
-                            type="text"
+                            type="email"
                             class="form-control"
                             name="jform[email]"
                             id="email"
