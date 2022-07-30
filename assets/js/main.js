@@ -1,3 +1,5 @@
+//=require ../../node_modules/jquery/dist/jquery.min.js
+
 jQuery(document).ready(function ($) {
 
     adjustContactMap();
