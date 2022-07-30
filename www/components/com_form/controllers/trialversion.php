@@ -67,52 +67,53 @@ class FormControllerTrialVersion extends JControllerForm
                 '',
                 JText::_('COM_FORM_FIELD_COMPANY_NAME_LABEL')
             )
-            . ':</b> ' . $formData['company_name'] . PHP_EOL;
+            . ':</b> ' . $formData['company_name'] . '<br>';
         $body .= '<b>' . str_replace(
                 '*',
                 '',
                 JText::_('COM_FORM_FIELD_ADDRESS_LABEL')
             )
-            . ':</b> ' . $formData['address'] . PHP_EOL;
+            . ':</b> ' . $formData['address'] . '<br>';
         $body .= '<b>' . str_replace(
                 '*',
                 '',
                 JText::_('COM_FORM_FIELD_INN_LABEL')
             )
-            . ':</b> ' . $formData['inn'] . PHP_EOL;
+            . ':</b> ' . $formData['inn'] . '<br>';
         $body .= '<b>' . str_replace(
                 '*',
                 '',
                 JText::_('COM_FORM_FIELD_CONTACT_PERSON_LABEL')
             )
-            . ':</b> ' . $formData['contact_person'] . PHP_EOL;
+            . ':</b> ' . $formData['contact_person'] . '<br>';
         $body .= '<b>' . str_replace(
                 '*',
                 '',
                 JText::_('COM_FORM_FIELD_PHONE_LABEL')
             )
-            . ':</b> ' . $formData['phone'] . PHP_EOL;
+            . ':</b> ' . $formData['phone'] . '<br>';
         $body .= '<b>' . str_replace(
                 '*',
                 '',
                 JText::_('COM_FORM_FIELD_EMAIL_LABEL')
             )
-            . ':</b> ' . $formData['email'] . PHP_EOL;
+            . ':</b> ' . $formData['email'] . '<br>';
         $body .= '<b>' . str_replace(
                 '*',
                 '',
                 JText::_('COM_FORM_FIELD_REQUEST_DATE_LABEL')
             )
-            . ':</b> ' . date('d.m.Y H:i:s') . PHP_EOL;
+            . ':</b> ' . date('d.m.Y H:i:s') . '<br>';
         $emailBody = '<html>
 					<body>' . $body . '</body>    
 				</html>';
 
-        $emailBody .= "------" . PHP_EOL . $config->get("sitename") . PHP_EOL;
+        $emailBody .= "------" . '<br>' . $config->get("sitename") . '<br>';
         $mailer->setSubject(
             $params->get('email_subject') ?? $config->get("sitename")
         );
         $mailer->setBody($emailBody);
         $mailer->Send();
+        return true;
     }
 }
