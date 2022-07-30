@@ -120,7 +120,8 @@ if ($this->params['menu-meta_keywords']) {
             <button type="submit"
                     class="btn btn-default btn-orange rounded request-complete"
             >
-                <?= JText::_('COM_FORM_SEND_BUTTON_LABEL'); ?>
+                <?= $this->submitText
+                    ?: JText::_('COM_FORM_SEND_BUTTON_LABEL'); ?>
             </button>
         </div>
         <input type="hidden" name="task" value="trialversion.sendRequest"/>
