@@ -39,6 +39,18 @@ class FormModelTrialVersions extends JModelList
         return true;
     }
 
+    public function getExportItems()
+    {
+        $db = JFactory::getDBO();
+        $query = $db->getQuery(true)
+            ->select(
+                'id, request_date, company_name, address, inn, contact_person, phone, email'
+            )
+            ->from('#__form_trial_version')
+            ->order('request_date DESC');
+        return $db->setQuery($query)->loadObjectList();
+    }
+
     protected function populateState($ordering = null, $direction = null)
     {
         parent::populateState('request_date', 'DESC');

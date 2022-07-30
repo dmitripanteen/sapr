@@ -1,6 +1,7 @@
 {
     "require": {
         "robmorgan/phinx": "^0.12.9",
+        "phpoffice/phpspreadsheet": "^1.24.1",
         "guzzlehttp/guzzle": "^7.0",
         "ext-zip": "*",
         "ext-json": "*",
