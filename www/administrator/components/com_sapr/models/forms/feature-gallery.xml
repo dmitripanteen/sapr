@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field
+            id="title"
+            name="title"
+            type="text"
+            label="JGLOBAL_TITLE"
+            description="COM_SAPR_FIELD_TITLE_DESC"
+            required="true"
+            maxlength="100"
+            class="input-xxlarge"
+            default=""
+    />
+    <field
+            id="published"
+            name="published"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="chzn-color-state"
+            filter="intval"
+            size="1"
+            default="1"
+    >
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field>
+    <field
+            name="image1"
+            type="media"
+            label="COM_SAPR_FIELD_IMAGE1_LABEL"
+            directory="sapr\images"
+    />
+    <field
+            name="image2"
+            type="media"
+            label="COM_SAPR_FIELD_IMAGE2_LABEL"
+            directory="sapr\images"
+    />
+    <field
+            name="image3"
+            type="media"
+            label="COM_SAPR_FIELD_IMAGE3_LABEL"
+            directory="sapr\images"
+    />
+</form>

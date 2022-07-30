@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="hidden">
+        <field
+                id="title"
+                name="title"
+                type="text"
+                label="JGLOBAL_TITLE"
+                description="COM_SAPR_FIELD_TITLE_DESC"
+                required="true"
+                maxlength="100"
+                class="input-xxlarge input-large-text"
+                default=""
+        />
+        <field
+                name="alias"
+                type="text"
+                label="COM_SAPR_FIELD_ALIAS_LABEL"
+                description="COM_SAPR_FIELD_ALIAS_DESC"
+                class="input-xlarge"
+        />
+    </fieldset>
+    <fieldset name="details">
+        <field
+                name="id"
+                type="hidden"
+        />
+        <field
+                id="published"
+                name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="chzn-color-state"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field
+                id="type"
+                name="type"
+                type="list"
+                label="COM_SAPR_FIELD_CONTENT_TYPE_LABEL"
+                description="COM_SAPR_FIELD_CONTENT_TYPE_DESC"
+                default="article"
+        >
+            <option value="article">COM_SAPR_FIELD_TYPE_ARTICLE_LABEL</option>
+            <option value="images">COM_SAPR_FIELD_TYPE_IMAGES_LABEL</option>
+        </field>
+        <field
+                id="layout"
+                name="layout"
+                type="list"
+                label="COM_SAPR_FIELD_LAYOUT_LABEL"
+                description="COM_SAPR_FIELD_LAYOUT_DESC"
+                default="column"
+        >
+            <option value="column">COM_SAPR_FIELD_LAYOUT_COLUMN_LABEL</option>
+            <option value="row">COM_SAPR_FIELD_LAYOUT_ROW_LABEL</option>
+        </field>
+        <field
+                id="custom_header"
+                name="custom_header"
+                type="text"
+                label="COM_SAPR_FIELD_CUSTOM_HEADER_LABEL"
+                description="COM_SAPR_FIELD_CUSTOM_HEADER_DESC"
+                class="input-xxlarge"
+                default=""
+        />
+        <field
+                id="description"
+                name="description"
+                type="editor"
+                label="JGLOBAL_DESCRIPTION"
+                description="COM_SAPR_FIELD_DESCRIPTION_DESC"
+                filter="safehtml"
+                class="inputbox"
+                default=""
+        />
+        <field
+                name="image"
+                type="media"
+                label="COM_SAPR_FIELD_IMAGE_LABEL"
+                description="COM_SAPR_FIELD_IMAGE_DESC"
+                directory="sapr\images"
+                showon="type:article"
+        />
+        <field
+                name="gallery"
+                type="subform"
+                label="COM_SAPR_FIELD_GALLERY_LABEL"
+                description="COM_SAPR_FIELD_GALLERY_DESC"
+                formsource="/administrator/components/com_sapr/models/forms/feature-gallery.xml"
+                layout="joomla.form.field.subform.repeatable-table"
+                multiple="true"
+                showon="type:images"
+        />
+    </fieldset>
+</form>

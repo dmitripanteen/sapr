@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_SAPR_FEATURES_LIST_TITLE">
+        <message>COM_SAPR_FEATURES_LIST_TITLE</message>
+    </layout>
+    <fields name="params">
+    </fields>
+</metadata>

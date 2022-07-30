@@ -238,15 +238,17 @@ footer{
     font-size: 36px;
     font-weight: normal;
     margin: 0;
-    line-height: 2em;
-    height: 2em;
     padding-left: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: relative;
+    line-height: normal;
     &:before{
       width: 4px;
       height: 100%;
       position: absolute;
       left: 0;
+      top: 0;
       border-radius: 4px;
       background-color: #F58229;
       content: '';
@@ -260,7 +262,19 @@ footer{
       font-size: 18px;
     }
   }
+  ul.cadelectro-features{
+    list-style-type: none;
+    margin-left: -40px;
+    li{
+      background-image: url(../img/custom-li-disk.png);
+      background-repeat: no-repeat;
+      line-height: 30px;
+      padding-left: 50px;
+      margin-bottom: 27px;
+    }
+  }
   @import 'contacts.less';
   @import 'form.less';
   @import 'videos.less';
+  @import 'sapr.less';
 }
