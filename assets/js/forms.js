@@ -4,6 +4,11 @@ jQuery(document).ready(function ($) {
     (function () {
         $('#trial-version-form button[type="submit"]').bind('click', function (e) {
             e.preventDefault();
+            if($(window).width()<=768 && !($('.info-message').isInViewport())){
+                $('html, body').animate({
+                    scrollTop: $(".info-message").offset().top
+                }, 500);
+            }
             var formData = getSerializedFormData("#trial-version-form");
             var task = $('#trial-version-form input[name="task"]').val();
             request = jQuery.ajax({
@@ -65,4 +70,11 @@ jQuery(document).ready(function ($) {
         $('#trial-version-form #phone').mask('P');
         $('#trial-version-form #email').mask('E', {reverse: true});
     }
+
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementTop > viewportTop && elementTop < viewportBottom;
+    };
 });

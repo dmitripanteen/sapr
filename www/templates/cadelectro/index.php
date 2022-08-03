@@ -43,7 +43,13 @@ $currPageClass = $currPage->getParams()->get('pageclass_sfx');
 	<div class="page-main-content<?php if ($homepage):?> homepage<?php endif;
 	?>">
         <jdoc:include type="message" />
-        <header>
+        <?php jimport( 'joomla.application.module.helper' );
+            $module_form = JModuleHelper::getModule( 'banners' );
+            $attribs['style'] = 'none';
+            $attribs['type'] = 'mobile';
+        echo JModuleHelper::renderModule( $module_form, $attribs );
+        ?>
+        <header id="header">
             <div class="inner">
                 <div id="mainmenu">
                     <a class="desktop-logo" href="/">
@@ -61,11 +67,16 @@ $currPageClass = $currPage->getParams()->get('pageclass_sfx');
 	</div>
 	<footer>
         <div class="inner">
-            <div class="desktop-logo-footer">
-                <a href="/">
-                    <img class="footer-logo"
-                         src="/templates/cadelectro/assets/img/cadelectro-logo.png">
-                </a>
+            <div class="logos">
+                <div class="desktop-logo-footer">
+                    <a href="/">
+                        <img class="footer-logo"
+                             src="/templates/cadelectro/assets/img/cadelectro-logo.png">
+                    </a>
+                </div>
+                <div class="mobile-logo-footer">
+                    <img class="technicon-logo" src="/templates/cadelectro/assets/img/technicon-logo.png">
+                </div>
             </div>
             <div class="footer-body">
                 <div class="footer-body-1">

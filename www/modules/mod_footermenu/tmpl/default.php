@@ -1,9 +1,9 @@
 <?php
 $itemsCount = count($list);
-$itemsPerColumn = ceil($itemsCount) / 2;
+$itemsPerColumn = ceil($itemsCount / 2);
 ?>
 <div class="col">
-    <?php foreach ($list as $i => &$item) {
+    <?php foreach ($list as $i => $item) {
         if ($i == $itemsPerColumn) {
             echo '</div><div class="col">';
         }

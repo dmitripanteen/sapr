@@ -1,15 +1,18 @@
-&.videos{
-  .videos{
+&.videos {
+  .videos {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    .col{
+
+    .col {
       flex-basis: calc(~'50% - 13px');
-      &:nth-child(n+3){
+
+      &:nth-child(n+3) {
         margin-top: 25px;
       }
-      .video-header{
+
+      .video-header {
         display: flex;
         font-size: 18px;
         text-align: center;
@@ -17,20 +20,24 @@
         align-items: center;
         height: 50px;
       }
-      .video-descr{
+
+      .video-descr {
         height: 33px;
-        p{
+
+        p {
           font-size: 14px;
           margin: 0;
         }
       }
-      .youtubeVideoWrapper{
-        &.responsive-youtube{
+
+      .youtubeVideoWrapper {
+        &.responsive-youtube {
           overflow: hidden;
           padding-bottom: 56.25%;
           position: relative;
           height: 0;
-          iframe{
+
+          iframe {
             left: 0;
             top: 0;
             height: 100%;

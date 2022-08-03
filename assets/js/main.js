@@ -8,6 +8,23 @@ jQuery(document).ready(function ($) {
         adjustContactMap();
         adjustRightImage();
     });
+    if($(window).width() <= 767.9) {
+        window.onscroll = function() {stickyHeader()};
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+    }
+
+    function stickyHeader() {
+        if (window.scrollY > sticky) {
+            header.classList.add("sticky");
+            $('.main-body').addClass('sticky');
+        } else {
+            header.classList.remove("sticky");
+            $('.main-body').removeClass('sticky');
+        }
+    }
+
+
 
     function adjustContactMap() {
         if ($(window).width() >= 1366) {

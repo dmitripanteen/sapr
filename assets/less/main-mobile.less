@@ -1,0 +1,215 @@
+@media (max-width: 767.9px) {
+  header {
+    height: 54px;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    z-index: 99;
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+    }
+
+    .inner {
+      width: 100%;
+
+      #mainmenu {
+        .desktop-logo {
+          display: none;
+        }
+
+        #navbar {
+          width: 100%;
+
+          ul.nav {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+              margin-left: 0;
+
+              a {
+                font-size: 14px;
+              }
+
+              &.active {
+                a:after {
+                  content: "";
+                  display: table;
+                  position: relative;
+                  bottom: -4px;
+                  border-bottom: 2px solid #F58229;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #slider {
+    display: none !important;
+
+    &.mobile {
+      display: block !important;
+    }
+
+    height: 100px;
+
+    .slide {
+      width: 100%;
+    }
+
+    .bgr {
+      display: none;
+    }
+
+    .bgr-mobile {
+      width: calc(~'80% - 100px');
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: calc(~'10% + 50px');
+      background-color: #ffffff;
+      opacity: 0.9;
+
+      &:before {
+        content: "";
+        border-style: solid;
+        border-width: 100px 50px 0 0;
+        border-color: transparent #ffffff #ffffff transparent;
+        position: absolute;
+        left: -50px;
+      }
+
+      &:after {
+        content: "";
+        border-style: solid;
+        border-width: 100px 50px 0 0;
+        border-color: #ffffff transparent transparent #ffffff;
+        position: absolute;
+        right: -50px;
+      }
+    }
+
+    .logo {
+      width: 100%;
+      top: -100%;
+      right: 0;
+      justify-content: center;
+
+      .banner-logo {
+        height: 35px;
+      }
+    }
+  }
+
+  .main-body {
+    min-height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 54px 0;
+
+    &.sticky {
+      padding-top: 30px;
+    }
+
+    h1.page-header {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px 15px 20px 0;
+      padding: 0;
+      text-align: left;
+      color: #000000;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .text-before-content {
+      margin: 15px 0;
+      font-size: 14px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    //  ul.cadelectro-features{
+    //    margin-left: -40px;
+    //    li{
+    //      line-height: 30px;
+    //      padding-left: 50px;
+    //      margin-bottom: 27px;
+
+  }
+
+  footer {
+    padding: 40px 30px;
+
+    .inner {
+      width: 100%;
+
+      .logos {
+        .desktop-logo-footer {
+          display: inline-block;
+          height: 20px;
+
+          .footer-logo {
+            height: 20px;
+          }
+        }
+
+        .mobile-logo-footer {
+          display: inline-block;
+          margin-left: 15px;
+          height: 20px;
+
+          .technicon-logo {
+            height: 20px;
+          }
+        }
+      }
+
+      .footer-body {
+        margin-top: 25px;
+
+        .footer-body-1 {
+          .footer-menu {
+            display: none;
+          }
+
+          .contacts {
+            .technicon-logo {
+              display: none;
+            }
+          }
+        }
+
+        .footer-social {
+          p {
+            margin-bottom: 20px;
+
+            a {
+              font-size: 24px;
+              margin: 0 7px;
+
+              &.mobile {
+                display: inline-block;
+              }
+            }
+
+            &.copyrights {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
