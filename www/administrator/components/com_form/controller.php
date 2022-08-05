@@ -7,7 +7,7 @@ class FormController extends JControllerLegacy
 {
     public function display($cachable = false, $urlparams = false){
         $input = JFactory::getApplication()->input;
-        $input->set('view', $input->getCmd('view', 'TrialVersions'));
+        $input->set('view', $input->getCmd('view', 'Forms'));
         return parent::display($cachable);
     }
 
