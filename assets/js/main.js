@@ -4,6 +4,25 @@ jQuery(document).ready(function ($) {
 
     adjustContactMap();
     adjustRightImage();
+    $('.footer-menu a').click(function (e) {
+        e.preventDefault();
+        var target = this.className;
+        $('#popup-module.popup.' + target).show();
+    });
+    $(document).click(function (e) {
+        var target = $(e.target);
+        if (
+            !target.closest('.footer-menu').length
+            && !target.closest('#popup-module').length
+            && $('#popup-module').is(":visible")
+        ) {
+            $('#popup-module').hide();
+        }
+    });
+    $('#popup-module .close-btn').click(function () {
+        $('#popup-module').hide();
+    });
+
     $(window).resize(function () {
         adjustContactMap();
         adjustRightImage();
@@ -23,8 +42,6 @@ jQuery(document).ready(function ($) {
         $('.btn-next').click(function () {
             menuNavClick('next');
         });
-
-
     }
 
     function menuProgressBar(position = 0) {
@@ -49,7 +66,7 @@ jQuery(document).ready(function ($) {
             nextMenu.addClass('active');
             var prevItems = nextMenu.prevAll('.left-menu-item').size();
             menuProgressBar(prevItems);
-            if(!nextMenu.next().is('.left-menu-item')){
+            if (!nextMenu.next().is('.left-menu-item')) {
                 $('.btn-next').addClass('inactive');
             }
             var link = $(nextMenu).attr('data-target');
@@ -64,7 +81,7 @@ jQuery(document).ready(function ($) {
             prevMenu.addClass('active');
             var prevItems = prevMenu.prevAll('.left-menu-item').size();
             menuProgressBar(prevItems);
-            if(!prevMenu.prev().is('.left-menu-item')){
+            if (!prevMenu.prev().is('.left-menu-item')) {
                 $('.btn-prev').addClass('inactive');
             }
             var link = $(prevMenu).attr('data-target');
@@ -165,12 +182,12 @@ jQuery(document).ready(function ($) {
             $(modal).hide();
         });
         $(zoomInBtn).unbind('click').bind('click', function () {
-            if(!$(this).hasClass('inactive')) {
+            if (!$(this).hasClass('inactive')) {
                 $(zoomOutBtn).removeClass('inactive');
                 var scale = $(this).attr('data-zoom');
                 switch (scale) {
                     case '0.5':
-                        $(modalImg).animate({width: '100%'}, 300 );
+                        $(modalImg).animate({width: '100%'}, 300);
                         $(zoomOutBtn).attr('data-zoom', '1');
                         $(zoomInBtn).attr('data-zoom', '1');
                         break;
@@ -178,7 +195,7 @@ jQuery(document).ready(function ($) {
                         break;
                     case '1':
                     default:
-                        $(modalImg).animate({width: '200%'}, 300 );
+                        $(modalImg).animate({width: '200%'}, 300);
                         $(this).addClass('inactive');
                         $(zoomOutBtn).attr('data-zoom', '2');
                         $(zoomInBtn).attr('data-zoom', '2');
@@ -187,12 +204,12 @@ jQuery(document).ready(function ($) {
             }
         });
         $(zoomOutBtn).unbind('click').bind('click', function () {
-            if(!$(this).hasClass('inactive')) {
+            if (!$(this).hasClass('inactive')) {
                 $(zoomInBtn).removeClass('inactive');
                 var scale = $(this).attr('data-zoom');
                 switch (scale) {
                     case '2':
-                        $(modalImg).animate({width: '100%'}, 300 );
+                        $(modalImg).animate({width: '100%'}, 300);
                         $(zoomOutBtn).attr('data-zoom', '1');
                         $(zoomInBtn).attr('data-zoom', '1');
                         break;
@@ -200,7 +217,7 @@ jQuery(document).ready(function ($) {
                         break;
                     case '1':
                     default:
-                        $(modalImg).animate({width: '50%'}, 300 );
+                        $(modalImg).animate({width: '50%'}, 300);
                         $(this).addClass('inactive');
                         $(zoomOutBtn).attr('data-zoom', '0.5');
                         $(zoomInBtn).attr('data-zoom', '0.5');

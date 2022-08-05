@@ -23,6 +23,7 @@
         <position>footer-contacts</position>
         <position>footer-social</position>
         <position>analytics</position>
+        <position>popup</position>
     </positions>
     <language>
         <language tag="en-GB">en-GB/en-GB.tpl_cadelectro.ini</language>

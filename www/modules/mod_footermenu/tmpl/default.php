@@ -25,7 +25,6 @@ $itemsPerColumn = ceil($itemsCount / 2);
                     'default_' . $item->type
                 );
                 break;
-
             default:
                 require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
                 break;
