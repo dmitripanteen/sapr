@@ -27,6 +27,9 @@ if ($this->params['menu-meta_keywords']) {
     >
         <?= JText::_('COM_SAPR_REQUEST_TRIAL_VERSION_BUTTON_LABEL'); ?>
     </a>
+    <a class="btn-prev inactive"><i class="fa fa-regular fa-arrow-left"></i></a>
+    <a class="btn-next"><i class="fa fa-arrow-right"></i></a>
+    <div class="progress-bar"></div>
 </div>
 
 <?php foreach ($this->items as $key => $item):?>
@@ -127,6 +130,10 @@ if ($this->params['menu-meta_keywords']) {
 <?php endforeach;?>
 
 <div id="modal" class="modal">
-    <span class="close">&times;</span>
     <img class="modal-content" id="modal-image">
+    <div id="controls">
+        <span class="zoom-in" data-zoom="1">+</span>
+        <span class="zoom-out" data-zoom="1">-</span>
+        <span class="close">&times;</span>
+    </div>
 </div>

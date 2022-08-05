@@ -53,6 +53,10 @@
       padding: 7px 0;
       margin-top: 10px;
     }
+
+    .btn-prev, .btn-next, .progress-bar {
+      display: none;
+    }
   }
 
   .feature-item-content {
@@ -259,19 +263,26 @@
       }
     }
 
-    .close {
+    #controls {
       position: absolute;
       top: 15px;
       right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
 
-      &:hover, &:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
+      .close {
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:hover, &:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
+      .zoom-in, .zoom-out {
+        display: none;
       }
     }
 

@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
             e.preventDefault();
             if($(window).width()<=768 && !($('.info-message').isInViewport())){
                 $('html, body').animate({
-                    scrollTop: $(".info-message").offset().top
+                    scrollTop: $("html").offset().top
                 }, 500);
             }
             var formData = getSerializedFormData("#trial-version-form");
@@ -73,8 +73,11 @@ jQuery(document).ready(function ($) {
 
     $.fn.isInViewport = function() {
         var elementTop = $(this).offset().top;
-        var viewportTop = $(window).scrollTop();
+        var viewportTop = $(window).scrollTop()+54;
         var viewportBottom = viewportTop + $(window).height();
+        console.log(elementTop);
+        console.log(viewportTop);
+        console.log(viewportBottom);
         return elementTop > viewportTop && elementTop < viewportBottom;
     };
 });

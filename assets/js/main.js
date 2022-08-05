@@ -7,11 +7,70 @@ jQuery(document).ready(function ($) {
     $(window).resize(function () {
         adjustContactMap();
         adjustRightImage();
+        menuProgressBar();
     });
-    if($(window).width() <= 767.9) {
-        window.onscroll = function() {stickyHeader()};
+    if ($(window).width() <= 767.9) {
+        window.onscroll = function () {
+            stickyHeader()
+        };
         var header = document.getElementById("header");
         var sticky = header.offsetTop;
+
+        menuProgressBar();
+        $('.btn-prev').click(function () {
+            menuNavClick('prev');
+        });
+        $('.btn-next').click(function () {
+            menuNavClick('next');
+        });
+
+
+    }
+
+    function menuProgressBar(position = 0) {
+        if ($(window).width() <= 767.9) {
+            var menuItems = $('.main-body.sapr .left-menu .left-menu-item').size();
+            var menuItemWidth = $('.main-body.sapr .left-menu .left-menu-item.active').width();
+            var barWidth = 1 / menuItems * menuItemWidth;
+            var barPosition = 15 + 27 + 30 + barWidth * position;
+            $('.main-body.sapr .left-menu .progress-bar').css({
+                'width': barWidth + 'px',
+                'left': barPosition + 'px'
+            });
+        }
+    }
+
+    function menuNavClick(direction) {
+        if (direction === 'next' && !$('.btn-next').hasClass('inactive')) {
+            $('.btn-prev').removeClass('inactive');
+            var activeMenu = $('.main-body.sapr .left-menu .left-menu-item.active');
+            activeMenu.removeClass('active');
+            var nextMenu = activeMenu.next();
+            nextMenu.addClass('active');
+            var prevItems = nextMenu.prevAll('.left-menu-item').size();
+            menuProgressBar(prevItems);
+            if(!nextMenu.next().is('.left-menu-item')){
+                $('.btn-next').addClass('inactive');
+            }
+            var link = $(nextMenu).attr('data-target');
+            $('.feature-item-content').removeClass('active');
+            $(link).addClass('active');
+        }
+        if (direction === 'prev' && !$('.btn-prev').hasClass('inactive')) {
+            $('.btn-next').removeClass('inactive');
+            var activeMenu = $('.main-body.sapr .left-menu .left-menu-item.active');
+            activeMenu.removeClass('active');
+            var prevMenu = activeMenu.prev();
+            prevMenu.addClass('active');
+            var prevItems = prevMenu.prevAll('.left-menu-item').size();
+            menuProgressBar(prevItems);
+            if(!prevMenu.prev().is('.left-menu-item')){
+                $('.btn-prev').addClass('inactive');
+            }
+            var link = $(prevMenu).attr('data-target');
+            $('.feature-item-content').removeClass('active');
+            $(link).addClass('active');
+        }
     }
 
     function stickyHeader() {
@@ -23,7 +82,6 @@ jQuery(document).ready(function ($) {
             $('.main-body').removeClass('sticky');
         }
     }
-
 
 
     function adjustContactMap() {
@@ -58,9 +116,9 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    $('.left-menu .menu-items a').click(function (e){
+    $('.left-menu .menu-items a').click(function (e) {
         e.preventDefault();
-        var link=$(this).attr('href');
+        var link = $(this).attr('href');
         $('.left-menu .menu-items .left-menu-item').removeClass('active');
         $('.left-menu .menu-items .left-menu-item[data-target="'
             + link + '"]').addClass('active');
@@ -77,19 +135,77 @@ jQuery(document).ready(function ($) {
         $('.gallery-images .gallery-images-items[data-group="' + group + '"]').addClass('active');
     });
 
-    $('.gallery-images .image').click(function (){
+    $('.gallery-images .image').click(function () {
         initModalImage($(this).find('.scheme'))
     });
 
-    function initModalImage(el){
+    function initModalImage(el) {
         var modal = $('#modal');
         var modalImg = $('#modal-image');
         $(modal).show();
         $(modalImg).attr('src', $(el).attr('src'));
-        var span = $('#modal .close');
-        $(modal).click(function(e) {
-            if( e.target.id != 'modal-image') {
+        var closeBtn = $('#modal .close');
+        var zoomInBtn = $('#modal .zoom-in');
+        var zoomOutBtn = $('#modal .zoom-out');
+        $(zoomOutBtn).attr('data-zoom', '1').removeClass('inactive');
+        $(zoomInBtn).attr('data-zoom', '1').removeClass('inactive');
+        $(modalImg).css('width', '100%');
+        $(modal).click(function (e) {
+            if (
+                e.target.id != 'modal-image'
+                && e.target.id != 'controls'
+                && !e.target.classList.contains('zoom-in')
+                && !e.target.classList.contains('zoom-out')
+                && !e.target.classList.contains('close')
+            ) {
                 $(modal).hide();
+            }
+        });
+        $(closeBtn).click(function () {
+            $(modal).hide();
+        });
+        $(zoomInBtn).unbind('click').bind('click', function () {
+            if(!$(this).hasClass('inactive')) {
+                $(zoomOutBtn).removeClass('inactive');
+                var scale = $(this).attr('data-zoom');
+                switch (scale) {
+                    case '0.5':
+                        $(modalImg).animate({width: '100%'}, 300 );
+                        $(zoomOutBtn).attr('data-zoom', '1');
+                        $(zoomInBtn).attr('data-zoom', '1');
+                        break;
+                    case '2':
+                        break;
+                    case '1':
+                    default:
+                        $(modalImg).animate({width: '200%'}, 300 );
+                        $(this).addClass('inactive');
+                        $(zoomOutBtn).attr('data-zoom', '2');
+                        $(zoomInBtn).attr('data-zoom', '2');
+                        break;
+                }
+            }
+        });
+        $(zoomOutBtn).unbind('click').bind('click', function () {
+            if(!$(this).hasClass('inactive')) {
+                $(zoomInBtn).removeClass('inactive');
+                var scale = $(this).attr('data-zoom');
+                switch (scale) {
+                    case '2':
+                        $(modalImg).animate({width: '100%'}, 300 );
+                        $(zoomOutBtn).attr('data-zoom', '1');
+                        $(zoomInBtn).attr('data-zoom', '1');
+                        break;
+                    case '0.5':
+                        break;
+                    case '1':
+                    default:
+                        $(modalImg).animate({width: '50%'}, 300 );
+                        $(this).addClass('inactive');
+                        $(zoomOutBtn).attr('data-zoom', '0.5');
+                        $(zoomInBtn).attr('data-zoom', '0.5');
+                        break;
+                }
             }
         });
     }
