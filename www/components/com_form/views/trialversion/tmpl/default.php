@@ -116,6 +116,7 @@ if ($this->params['menu-meta_keywords']) {
             <div id="captcha" class="g-recaptcha"
                  data-sitekey="<?php echo ReCaptcha::getPublicKey(); ?>"></div>
         </div>
+        <p class="policy-label"><?=JText::_('COM_FORM_LICENSE_AGREEMENT_LABEL');?></p>
         <div class="row form-footer">
             <button type="submit"
                     class="btn btn-default btn-orange rounded request-complete"

@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 
     adjustContactMap();
     adjustRightImage();
-    $('.footer-menu a').click(function (e) {
+    $('.footer-menu a, a.popup-opener').click(function (e) {
         e.preventDefault();
         var target = $(this).attr('href');
         $(target).show();
@@ -12,7 +12,8 @@ jQuery(document).ready(function ($) {
     $(document).click(function (e) {
         var target = $(e.target);
         if (
-            !target.closest('.footer-menu').length
+            !target.hasClass('popup-opener')
+            && !target.closest('.footer-menu').length
             && !target.closest('.popup-module').length
             && $('.popup-module').is(":visible")
         ) {

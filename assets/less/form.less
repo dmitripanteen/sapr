@@ -57,10 +57,18 @@
       }
     }
 
-    .required-label {
+    .required-label, .policy-label {
       color: #F58229;
       font-size: 18px;
       margin: 50px 0 0 0;
+      a{
+        color: #F58229;
+        font-weight: bold;
+        text-decoration: underline;
+        &:hover, &:focus, &:active{
+          text-decoration: none;
+        }
+      }
     }
 
     #captcha {
