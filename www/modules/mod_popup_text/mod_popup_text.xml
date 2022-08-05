@@ -18,10 +18,11 @@
 		<fields name="params">
 			<fieldset name="basic">
 				<field
-						name="module_class"
+						name="module_id"
 						type="text"
-						label="MOD_POPUP_TEXT_FIELD_MODULE_CLASS_LABEL"
-						description="MOD_POPUP_TEXT_FIELD_MODULE_CLASS_DESC"
+						label="MOD_POPUP_TEXT_FIELD_MODULE_ID_LABEL"
+						description="MOD_POPUP_TEXT_FIELD_MODULE_ID_DESC"
+						required="true"
 				/>
 				<field
 						name="text"

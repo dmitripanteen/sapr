@@ -2,7 +2,7 @@
 defined('_JEXEC') or die;
 
 $documentText = $params->get('text', '');
-$moduleClass = $params->get('module_class', '');
+$moduleId = $params->get('module_id', '');
 
 require JModuleHelper::getLayoutPath(
     'mod_popup_text',

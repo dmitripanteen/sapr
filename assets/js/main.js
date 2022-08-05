@@ -6,21 +6,21 @@ jQuery(document).ready(function ($) {
     adjustRightImage();
     $('.footer-menu a').click(function (e) {
         e.preventDefault();
-        var target = this.className;
-        $('#popup-module.popup.' + target).show();
+        var target = $(this).attr('href');
+        $(target).show();
     });
     $(document).click(function (e) {
         var target = $(e.target);
         if (
             !target.closest('.footer-menu').length
-            && !target.closest('#popup-module').length
-            && $('#popup-module').is(":visible")
+            && !target.closest('.popup-module').length
+            && $('.popup-module').is(":visible")
         ) {
-            $('#popup-module').hide();
+            $('.popup-module').hide();
         }
     });
-    $('#popup-module .close-btn').click(function () {
-        $('#popup-module').hide();
+    $('.popup-module .close-btn').click(function () {
+        $('.popup-module').hide();
     });
 
     $(window).resize(function () {
