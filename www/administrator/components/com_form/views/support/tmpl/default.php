@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.tooltip');
 JHtml::_('formbehavior.chosen', 'select', null, array('disable_search_threshold' => 10));
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_form&view=trialversions'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_form&view=support'); ?>" method="post" name="adminForm" id="adminForm">
 
     <?php if($this->sidebar):?>
         <div id="j-sidebar-container" class="span2">

@@ -42,9 +42,10 @@
 
 	<field
 			name="email"
-			type="text"
+			type="email"
 			label="COM_FORM_FIELD_EMAIL_LABEL"
 			filter="string"
 			required="true"
+			validate="email"
 	/>
 </form>

@@ -55,7 +55,7 @@ foreach ($links as $link) {
     }
     echo $res;
 }
-echo '<a class="mobile" href="#"><i class="ti ti-help-alt"></i></a>';
+echo '<a class="mobile popup-opener" href="#popup-support-form"><i class="ti ti-help-alt"></i></a>';
 echo '</p>'; ?>
 <p class="copyrights">&copy;<?= date('Y') . ' ' . $copyrightsText; ?></p>
 

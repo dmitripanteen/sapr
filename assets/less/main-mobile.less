@@ -241,5 +241,33 @@
       }
     }
   }
+  #popup-support-form{
+    width: 340px;
+    height: 616px;
+    position: fixed;
+    top: calc(~'50% - 308px');
+    left: calc(~'50% - 170px');
+    padding: 25px;
+    &.success-send{
+      height: 154px;
+      top: calc(~'50% - 77px');
+    }
+    .error-msg{
+      width: calc(~'100% - 52px');
+      top: 52px;
+    }
+    .form-body{
+      margin-top: 40px;
+      .row{
+        margin-bottom: 10px;
+      }
+      .files{
+        margin-bottom: 20px;
+        .file_upload_container{
+          height: 30px;
+        }
+      }
+    }
+  }
 }
 

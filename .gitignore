@@ -3,6 +3,7 @@
 /vendor/
 
 /www/cache/
+/www/images/user-support
 /www/logs/
 /www/tmp/
 /www/administrator/cache/

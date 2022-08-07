@@ -13,6 +13,7 @@ jQuery(document).ready(function ($) {
         var target = $(e.target);
         if (
             !target.hasClass('popup-opener')
+            && !target.parent().hasClass('popup-opener')
             && !target.closest('.footer-menu').length
             && !target.closest('.popup-module').length
             && $('.popup-module').is(":visible")

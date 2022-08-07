@@ -1,6 +1,6 @@
 <?php defined('_JEXEC') or die;
 
-class FormViewTrialVersions extends JViewLegacy
+class FormViewSupport extends JViewLegacy
 {
 
     protected $items;
@@ -12,7 +12,7 @@ class FormViewTrialVersions extends JViewLegacy
 
     public function display($tpl = null)
     {
-        FormHelper::addSubmenu('trial');
+        FormHelper::addSubmenu('support');
         $this->items = $this->getModel()->getItems();
         $this->sidebar = JHtmlSidebar::render();
         $this->pagination = $this->get('Pagination');
@@ -34,13 +34,13 @@ class FormViewTrialVersions extends JViewLegacy
 
     protected function addToolBar()
     {
-        JToolBarHelper::title(JText::_('COM_FORM_TRIAL_VERSIONS_LIST'));
+        JToolBarHelper::title(JText::_('COM_FORM_SUPPORT_REQUESTS_LIST'));
         JToolBarHelper::deleteList(
             'JGLOBAL_CONFIRM_DELETE',
-            'trialversions.delete'
+            'support.delete'
         );
         JToolBarHelper::custom(
-            'trialversions.printExcel',
+            'support.printExcel',
             'download',
             'download',
             JText::_('COM_FORM_EXPORT_EXCEL_BTN'),

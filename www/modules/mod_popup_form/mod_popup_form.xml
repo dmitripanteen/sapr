@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_popup_form</name>
+	<author>Dmitri Pantelei</author>
+	<creationDate>August 2022</creationDate>
+	<description>MOD_POPUP_FORM_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_popup_form">mod_popup_form.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_popup_form.ini</language>
+		<language tag="en-GB">en-GB.mod_popup_form.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_popup_form.ini</language>
+		<language tag="ru-RU">ru-RU.mod_popup_form.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="module_id"
+						type="text"
+						label="MOD_POPUP_FORM_FIELD_MODULE_ID_LABEL"
+						description="MOD_POPUP_FORM_FIELD_MODULE_ID_DESC"
+						required="true"
+				/>
+				<field
+						name="success_msg"
+						type="textarea"
+						label="MOD_POPUP_FORM_FIELD_SUCCESS_MSG_LABEL"
+						description="MOD_POPUP_FORM_FIELD_SUCCESS_MSG_DESC"
+						required="true"
+						cols="5"
+						rows="5"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
