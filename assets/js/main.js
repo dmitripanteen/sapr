@@ -104,8 +104,8 @@ jQuery(document).ready(function ($) {
 
 
     function adjustContactMap() {
-        if ($(window).width() >= 1366) {
-            var diff = $(window).width() - 1366;
+        if ($(window).width() >= 1349) {
+            var diff = $(window).width() - 1349;
             $('.contacts .map').css('right', diff / -2 + 'px');
             $('.contacts .map').css('width', 'calc(50% + ' + diff / 2 + 'px)');
             $('.contacts .map .triangle').css(
@@ -120,8 +120,8 @@ jQuery(document).ready(function ($) {
     }
 
     function adjustRightImage() {
-        if ($(window).width() >= 1366) {
-            var diff = $(window).width() - 1366;
+        if ($(window).width() >= 1349) {
+            var diff = $(window).width() - 1349;
             $('.content-row.active .col-right').css('right', diff / -2 + 'px');
             $('.content-row.active .col-right').css('width', 'calc(37% + ' + diff / 2 + 'px)');
             $('.content-row.active .col-right .triangle').css(
