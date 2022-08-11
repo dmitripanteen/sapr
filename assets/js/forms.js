@@ -162,18 +162,11 @@ jQuery(document).ready(function ($) {
     $("#user-support-form").on("submit", function (e) {
         e.preventDefault();
         var formData = $(this).serializeObject();
-        var files = {};
-        files.file1 = $('#user-support-form #file1').prop('files')[0];
-        files.file2 = $('#user-support-form #file2').prop('files')[0];
-        files.file3 = $('#user-support-form #file3').prop('files')[0];
-        files.file4 = $('#user-support-form #file4').prop('files')[0];
-        var inputData = {...formData, ...files}
-        var f = new FormData($('#user-support-form')[0]);
-        console.log(f);
+        var inputData = new FormData($('#user-support-form')[0]);
         $.ajax({
             type: 'POST',
             url: 'index.php?option=' + formData.option + '&task=' + formData.task,
-            data: f,
+            data: inputData,
             dataType: 'json',
             processData: false,
             contentType: false,
