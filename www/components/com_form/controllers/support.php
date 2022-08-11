@@ -169,7 +169,7 @@ class FormControllerSupport extends JControllerForm
 				</html>';
 
         $emailBody .= "------" . '<br>' . $config->get("sitename") . '<br>';
-        $mailer->setSubject("Поддержка пользователей");
+        $mailer->setSubject(JText::_('COM_FORM_USER_SUPPORT_MAIL_HEADER'));
         $mailer->setBody($emailBody);
         $mailer->Send();
         return true;

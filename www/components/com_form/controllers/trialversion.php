@@ -110,7 +110,7 @@ class FormControllerTrialVersion extends JControllerForm
 
         $emailBody .= "------" . '<br>' . $config->get("sitename") . '<br>';
         $mailer->setSubject(
-            JText::_('COM_FORM_USER_SUPPORT_MAIL_HEADER')
+            $params->get('email_subject') ?? $config->get("sitename")
         );
         $mailer->setBody($emailBody);
         $mailer->Send();
