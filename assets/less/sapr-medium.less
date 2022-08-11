@@ -1,0 +1,55 @@
+&.sapr {
+  @media (max-width: 1365.9px) and (min-width: 768px) {
+
+    .feature-item-content {
+      margin-left: 27px;
+
+      .description {
+
+        p {
+          font-size: 14px;
+
+          &.page-secondary-headline {
+            font-size: 14px;
+          }
+
+          &.paragraph-xl {
+            font-size: 30px;
+          }
+
+          &.paragraph-xxl {
+            font-size: 120px;
+          }
+
+          .features-button {
+            width: 80%;
+            margin-left: 10%;
+          }
+        }
+      }
+
+      &.content-row {
+        .col-right {
+          margin-right: -20px;
+        }
+
+        @media (max-width: 1023.9px) {
+          .col-left {
+            width: 100%;
+          }
+
+          .col-right {
+            height: auto;
+            position: static;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .triangle {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

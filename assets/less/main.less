@@ -293,7 +293,7 @@ footer {
   }
 }
 
-.popup-module{
+.popup-module {
   display: none;
   width: 1100px;
   height: 90%;
@@ -306,7 +306,8 @@ footer {
   border: 2px solid #F58229;
   padding: 30px;
   box-sizing: border-box;
-  .close-btn{
+
+  .close-btn {
     position: absolute;
     top: 12px;
     right: -21px;
@@ -318,33 +319,39 @@ footer {
     font-size: 30px;
     padding-left: 6px;
     padding-top: 6px;
-    &:hover, &:focus, &:active{
-      cursor:pointer;
+
+    &:hover, &:focus, &:active {
+      cursor: pointer;
       background-color: #EF7221;
     }
   }
-  .inner{
+
+  .inner {
     width: 100%;
     height: 100%;
     overflow: hidden;
+
     .document {
       width: 100%;
       height: 100%;
       overflow-y: scroll;
       padding-right: 57px;
       box-sizing: content-box;
-      h1{
+
+      h1 {
         font-family: 'Inter Bold', sans-serif;
         font-size: 32px;
       }
-      h2{
+
+      h2 {
         font-family: 'Inter SemiBold', sans-serif;
         font-size: 24px;
       }
     }
   }
 }
-#popup-support-form{
+
+#popup-support-form {
   display: none;
   width: 400px;
   height: 755px;
@@ -352,18 +359,21 @@ footer {
   top: calc(~'50% - 378px');
   left: calc(~'50% - 200px');
   padding: 25px 75px;
-  &.success-send{
+
+  &.success-send {
     height: 154px;
     top: calc(~'50% - 77px');
   }
-  .form-header{
+
+  .form-header {
     font-size: 16px;
     font-weight: bold;
     color: #EF7221;
     margin-top: 0;
     text-align: center;
   }
-  .error-msg{
+
+  .error-msg {
     display: none;
     position: absolute;
     width: calc(~'100% - 154px');
@@ -374,16 +384,20 @@ footer {
     background-color: #FF0000;
     color: #fff;
   }
-  .form-body{
+
+  .form-body {
     margin-top: 60px;
-    .row{
+
+    .row {
       margin-bottom: 20px;
-      label{
+
+      label {
         font-size: 12px;
         font-weight: bold;
         color: #EF7221;
       }
-      input{
+
+      input {
         width: 100%;
         height: 30px;
         border: 1px solid #EF7221;
@@ -392,7 +406,8 @@ footer {
         padding: 6px 10px;
         margin-top: 5px;
       }
-      textarea{
+
+      textarea {
         resize: none;
         width: 100%;
         border: 1px solid #EF7221;
@@ -402,37 +417,45 @@ footer {
         margin-top: 5px;
       }
     }
-    .files{
+
+    .files {
       margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      .file_upload_container{
+
+      .file_upload_container {
         flex: 0 calc(~'50% - 7px');
         border: 1px solid #EF7221;
         height: 60px;
         position: relative;
         margin-bottom: 10px;
-        &:hover{
+
+        &:hover {
           background-color: #ffe5d4;
-          .tooltip.upload-text{
+
+          .tooltip.upload-text {
             display: flex;
           }
         }
-        label{
+
+        label {
           width: 100%;
           height: 100%;
           color: #EF7221;
           display: flex;
           justify-content: center;
           align-items: center;
-          .ti{
+
+          .ti {
             font-size: 20px;
           }
         }
-        .filename{
+
+        .filename {
           display: none;
-          &.active{
+
+          &.active {
             position: absolute;
             top: 2px;
             left: 2px;
@@ -451,12 +474,14 @@ footer {
       }
     }
   }
-  .required-label{
+
+  .required-label {
     font-size: 12px;
     font-weight: bold;
     color: #EF7221;
   }
-  .request-complete{
+
+  .request-complete {
     width: 100%;
     height: 34px;
     margin-top: 13px;
@@ -465,19 +490,22 @@ footer {
     color: #EF7221;
     background-color: #FFFFFF;
     text-align: center;
-    &:hover, &:focus, &:active{
+
+    &:hover, &:focus, &:active {
       color: #FFFFFF;
       background-color: #EF7221;
       cursor: pointer;
     }
   }
-  .success-msg{
+
+  .success-msg {
     display: none;
     text-align: center;
     font-size: 16px;
     margin: 30px 0;
   }
 }
+
 .main-body {
   min-height: 660px;
   width: 1340px;
@@ -557,6 +585,10 @@ footer {
   @import 'form-mobile.less';
   @import 'videos-mobile.less';
   @import 'sapr-mobile.less';
+  @import 'contacts-medium.less';
+  @import 'form-medium.less';
+  @import 'sapr-medium.less';
 }
 
 @import 'main-mobile.less';
+@import 'main-medium.less';

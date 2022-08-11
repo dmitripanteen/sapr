@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
     (function () {
         $('#trial-version-form button[type="submit"]').bind('click', function (e) {
             e.preventDefault();
-            if($(window).width()<=768 && !($('.info-message').isInViewport())){
+            if ($(window).width() <= 768 && !($('.info-message').isInViewport())) {
                 $('html, body').animate({
                     scrollTop: $("html").offset().top
                 }, 500);
@@ -104,52 +104,57 @@ jQuery(document).ready(function ($) {
         $('#popup-support-form #email').mask('E', {reverse: true});
     }
 
-    $.fn.isInViewport = function() {
+    $.fn.isInViewport = function () {
         var elementTop = $(this).offset().top;
-        var viewportTop = $(window).scrollTop()+54;
+        var viewportTop = $(window).scrollTop() + 54;
         var viewportBottom = viewportTop + $(window).height();
         return elementTop > viewportTop && elementTop < viewportBottom;
     };
 
-    $.fn.serializeObject = function() {
+    $.fn.serializeObject = function () {
         var data = {};
-        $.each( this.serializeArray(), function( key, obj ) {
+        $.each(this.serializeArray(), function (key, obj) {
             var a = obj.name.match(/(.*?)\[(.*?)\]/);
-            if(a !== null)
-            {
+            if (a !== null) {
                 var subName = new String(a[1]);
                 var subKey = new String(a[2]);
-                if( !data[subName] ) {
-                    data[subName] = { };
+                if (!data[subName]) {
+                    data[subName] = {};
                     data[subName].length = 0;
-                };
+                }
+                ;
                 if (!subKey.length) {
                     subKey = data[subName].length;
                 }
-                if( data[subName][subKey] ) {
-                    if( $.isArray( data[subName][subKey] ) ) {
-                        data[subName][subKey].push( obj.value );
+                if (data[subName][subKey]) {
+                    if ($.isArray(data[subName][subKey])) {
+                        data[subName][subKey].push(obj.value);
                     } else {
-                        data[subName][subKey] = { };
-                        data[subName][subKey].push( obj.value );
-                    };
+                        data[subName][subKey] = {};
+                        data[subName][subKey].push(obj.value);
+                    }
+                    ;
                 } else {
                     data[subName][subKey] = obj.value;
-                };
+                }
+                ;
                 data[subName].length++;
             } else {
                 var keyName = new String(obj.name);
-                if( data[keyName] ) {
-                    if( $.isArray( data[keyName] ) ) {
-                        data[keyName].push( obj.value );
+                if (data[keyName]) {
+                    if ($.isArray(data[keyName])) {
+                        data[keyName].push(obj.value);
                     } else {
-                        data[keyName] = { };
-                        data[keyName].push( obj.value );
-                    };
+                        data[keyName] = {};
+                        data[keyName].push(obj.value);
+                    }
+                    ;
                 } else {
                     data[keyName] = obj.value;
-                };
-            };
+                }
+                ;
+            }
+            ;
         });
         return data;
     };
@@ -162,7 +167,7 @@ jQuery(document).ready(function ($) {
         files.file2 = $('#user-support-form #file2').prop('files')[0];
         files.file3 = $('#user-support-form #file3').prop('files')[0];
         files.file4 = $('#user-support-form #file4').prop('files')[0];
-        var inputData = {...formData, ...files }
+        var inputData = {...formData, ...files}
         var f = new FormData($('#user-support-form')[0]);
         console.log(f);
         $.ajax({
@@ -173,11 +178,11 @@ jQuery(document).ready(function ($) {
             processData: false,
             contentType: false,
             success: function (response) {
-                if(response.success === true) {
+                if (response.success === true) {
                     $("#user-support-form").hide();
                     $("#popup-support-form").addClass('success-send');
                     $("#popup-support-form .success-msg").show();
-                } else{
+                } else {
                     $("#user-support-form .error-msg").html(response.error);
                     $("#user-support-form .error-msg").css('display', 'flex');
                 }

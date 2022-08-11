@@ -94,7 +94,7 @@ jQuery(document).ready(function ($) {
     function stickyHeader() {
         var header = document.getElementById("header");
         var sticky = header.offsetTop;
-        if($(window).width() <= 767.9) {
+        if ($(window).width() <= 767.9) {
             if (window.scrollY > sticky) {
                 header.classList.add("sticky");
                 $('.main-body').addClass('sticky');
@@ -107,9 +107,14 @@ jQuery(document).ready(function ($) {
 
 
     function adjustContactMap() {
+        var diff = 0;
         if ($(window).width() >= 1349) {
-            var diff = $(window).width() - 1349;
+            diff = $(window).width() - 1349;
             $('.contacts .map').css('right', diff / -2 + 'px');
+        } else if ($(window).width() >= 1007) {
+            diff = $(window).width() - 1007;
+        }
+        if (diff > 0) {
             $('.contacts .map').css('width', 'calc(50% + ' + diff / 2 + 'px)');
             $('.contacts .map .triangle').css(
                 'border-right-width',
@@ -123,9 +128,14 @@ jQuery(document).ready(function ($) {
     }
 
     function adjustRightImage() {
+        var diff = 0;
         if ($(window).width() >= 1349) {
-            var diff = $(window).width() - 1349;
+            diff = $(window).width() - 1349;
             $('.content-row.active .col-right').css('right', diff / -2 + 'px');
+        } else if ($(window).width() >= 1007) {
+            diff = $(window).width() - 1007;
+        }
+        if (diff > 0) {
             $('.content-row.active .col-right').css('width', 'calc(37% + ' + diff / 2 + 'px)');
             $('.content-row.active .col-right .triangle').css(
                 'border-right-width',
