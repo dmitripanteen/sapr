@@ -157,6 +157,12 @@ jQuery(document).ready(function ($) {
         $('.feature-item-content').removeClass('active');
         $(link).addClass('active');
         adjustRightImage();
+        //only for non-mobile screens
+        if (!$('.btn-prev').is(':visible')) {
+            var offsetTop = $('.main-body').offset().top;
+            var headerHeight = $('header').outerHeight();
+            $('html, body').animate({scrollTop: offsetTop - headerHeight}, 500);
+        }
     });
 
     $('.gallery-menu .gallery-menu-item').click(function () {
