@@ -4,6 +4,7 @@
     padding: 15px 25px;
     background-color: #ffffff;
     z-index: 99;
+    position: static;
 
     &.sticky {
       position: fixed;
@@ -52,6 +53,7 @@
 
   #slider {
     display: none !important;
+    margin-top: 0;
 
     &.mobile {
       display: block !important;
@@ -243,9 +245,9 @@
   }
   #popup-support-form{
     width: 340px;
-    height: 616px;
+    height: 620px;
     position: fixed;
-    top: calc(~'50% - 308px');
+    top: calc(~'50% - 310px');
     left: calc(~'50% - 170px');
     padding: 25px;
     &.success-send{

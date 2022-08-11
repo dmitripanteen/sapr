@@ -44,6 +44,10 @@ header {
   width: 100%;
   padding: 20px 0;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: #FFFFFF;
 
   .inner {
     width: 1340px;
@@ -90,6 +94,7 @@ header {
 
 #slider {
   display: none;
+  margin-top: 80px;
 
   &.mobile {
     display: none !important;
@@ -476,7 +481,7 @@ footer {
 .main-body {
   min-height: 660px;
   width: 1340px;
-  margin: 50px auto;
+  margin: 130px auto 50px;
 
   .btn-default {
     height: 70px;
