@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 
     adjustContactMap();
     adjustRightImage();
-    $('.footer-menu a, a.popup-opener').click(function (e) {
+    $('.footer-menu a.popup-opener, a.popup-opener').click(function (e) {
         e.preventDefault();
         var target = $(this).attr('href');
         $(target).show();
