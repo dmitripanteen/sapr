@@ -247,8 +247,34 @@ jQuery(document).ready(function ($) {
             }
         });
     }
+
+    function autoSwitchSaprMenu() {
+        if (
+            !$('.btn-prev').is(':visible')
+            && $('#autochange').isInViewport(true)
+        ) {
+            var nextItem = $('.feature-item-content.active').next('.feature-item-content');
+            if(nextItem.length){
+                $('.feature-item-content.active').removeClass('active');
+                $(nextItem).addClass('active');
+                $('.main-body.sapr .left-menu .left-menu-item').removeClass('active');
+                $('.main-body.sapr .left-menu .left-menu-item[data-target="#'
+                    + $(nextItem).attr('id') + '"]').addClass('active');
+                var offsetTop = $('.main-body').offset().top;
+                var headerHeight = $('header').outerHeight();
+                $('html, body').animate({scrollTop: offsetTop - headerHeight}, 500);
+            }
+        }
+    }
+
+    $(document).on('scrollDown',function(){
+        autoSwitchSaprMenu();
+    });
+
+
 });
 
 //=require ./forms.js
 //=require ./jquery.mask.min.js
 //=require ./jquery.mask.custom.js
+//=require ./jquery.scrollDetector.js

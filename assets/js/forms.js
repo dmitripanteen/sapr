@@ -104,9 +104,12 @@ jQuery(document).ready(function ($) {
         $('#popup-support-form #email').mask('E', {reverse: true});
     }
 
-    $.fn.isInViewport = function () {
+    $.fn.isInViewport = function (showFullWindow = false) {
         var elementTop = $(this).offset().top;
-        var viewportTop = $(window).scrollTop() + 54;
+        var viewportTop = $(window).scrollTop();
+        if(!showFullWindow){
+            viewportTop += 54;
+        }
         var viewportBottom = viewportTop + $(window).height();
         return elementTop > viewportTop && elementTop < viewportBottom;
     };
