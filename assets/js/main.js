@@ -269,6 +269,7 @@ jQuery(document).ready(function ($) {
 
     $(document).on('scrollDown',function(){
         autoSwitchSaprMenu();
+        adjustRightImage();
     });
 
 
