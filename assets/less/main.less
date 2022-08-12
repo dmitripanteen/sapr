@@ -291,9 +291,10 @@ footer {
       }
     }
   }
-  #autochange{
-    width:0;
-    height:0;
+
+  #autochange {
+    width: 0;
+    height: 0;
   }
 }
 
@@ -310,6 +311,20 @@ footer {
   border: 2px solid #F58229;
   padding: 30px;
   box-sizing: border-box;
+
+  ol.sequense-list {
+    counter-reset: item;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+
+      &:before {
+        content: counters(item, ".") ". ";
+        counter-increment: item;
+      }
+    }
+  }
 
   .close-btn {
     position: absolute;
@@ -580,6 +595,7 @@ footer {
       margin-bottom: 27px;
     }
   }
+
 
   @import 'contacts.less';
   @import 'form.less';
