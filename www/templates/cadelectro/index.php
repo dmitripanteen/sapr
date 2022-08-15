@@ -95,6 +95,6 @@ $currPageClass = $currPage->getParams()->get('pageclass_sfx');
         <div id="autochange"></div>
 	</footer>
     <jdoc:include type="modules" name="popup" />
-<?php $this->addStyleSheet($template.'/assets/css/main.css?v=1');?>
+<?php $this->addStyleSheet($template.'/assets/css/main.css?v=2');?>
 </body>
 </html>

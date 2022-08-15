@@ -33,6 +33,6 @@ $document->setTitle('Страница не найдена');
 </div>
 <footer>
 </footer>
-<?php $this->addStyleSheet($templateUrl . '/assets/css/main.css?v=1'); ?>
+<?php $this->addStyleSheet($templateUrl . '/assets/css/main.css?v=2'); ?>
 </body>
 </html>
